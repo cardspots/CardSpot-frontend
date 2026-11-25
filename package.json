@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "vitepress": "^2.0.0-alpha.21"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "format": "prettier --write \"{docs,page}/**/*.{ts,tsx,js,jsx,json,css,md,vue}\""
+  }
+}
