@@ -12,6 +12,9 @@ hero:
         - theme: alt
           text: 登录
           link: /login
+        - theme: alt
+          text: 查看支持的商家
+          link: /select
 
 features:
     - title: Feature A

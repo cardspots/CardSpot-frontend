@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   srcDir: "../page",
   
-  title: "Card Spot",
+  title: "CardSpot",
   description: "你的附近哪里可以刷卡",
   cleanUrls: true,
   themeConfig: {

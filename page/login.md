@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 
 title: '登录'
 description: 登录

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 
 title: '注册'
 description: 注册
@@ -23,7 +23,7 @@ description: 注册
 <script setup>
 import { ref } from 'vue'
 
-import { useTurnstile } from '../docs/.vitepress/theme/utils/useTurnstile.js'
+import { useTurnstile } from '../vue/utils/useTurnstile.js'
 
 const name = ref('')
 const email = ref('')
