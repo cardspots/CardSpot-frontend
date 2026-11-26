@@ -49,7 +49,7 @@ async function handleSubmit() {
 
     loading.value = true//开始让用户等待
     try{
-        const res = await fetch('http://localhost:8787/auth/reg', {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/auth/reg`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

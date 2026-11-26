@@ -16,7 +16,7 @@
         error.value = ''
         loading.value = true
         try {
-            const res = await fetch('http://localhost:8787/sel', {
+            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/sel`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

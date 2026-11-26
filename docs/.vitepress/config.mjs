@@ -7,6 +7,9 @@ export default defineConfig({
   title: "CardSpot",
   description: "你的附近哪里可以刷卡",
   cleanUrls: true,
+  vite:{
+    envDir: '..'
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

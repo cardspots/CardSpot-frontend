@@ -1,19 +1,21 @@
 export default {
-	async paths() {
-		const res = await fetch('http://localhost:8787/sys/routesName')
+  async paths() {
+    const res = await fetch(
+      'https://cardspot-server.hosinoeiji.workers.dev/sys/routesName'
+    )
 
-		if (!res.ok) {
-			throw new Error('取得使用者列表失敗')
-		}
+    if (!res.ok) {
+      throw new Error(`取得使用者列表失敗：HTTP ${res.status}`)
+    }
 
-		const usernames = await res.json()
+    const usernames = await res.json()
 
-		return usernames.map((username) => {
-			return {
-				params: {
-					username: username.name,
-				},
-			}
-		})
-	},
+    const paths = usernames.map((username) => ({
+      params: {
+        username: username.name,
+      },
+    }))
+
+    return paths
+  },
 }

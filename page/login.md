@@ -31,7 +31,7 @@ async function handleSubmit() {
 
     loading.value = true//开始让用户等待
     try{
-        const res = await fetch('http://localhost:8787/auth/login', {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/auth/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include',
