@@ -37,12 +37,3 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
-
-/todo
-
-docs/.vitepress/cache/
-
-
-# CLOUDFLARE
-
-.wrangler
