@@ -5,9 +5,7 @@ src/i18n/i18n.js
 
 import { createI18n } from 'vue-i18n'
 import { LANG } from '@/utils/setting' //查看src/utils/setting.js，LANG是从cookie中获取的语言设置
-import enuk from './en-uk/master'
 import zhcn from './zh-cn/master.js'
-import ja from './ja/master.js'
 import SUPPORT_LOCALES from './supportLocales.js'
 
 function resolveLocale(browserLang) {
@@ -44,8 +42,6 @@ const i18n = createI18n({
 	globalInjection: true, // 允许在模板中直接使用 $t
 	messages: {
 		zhcn,
-		ja,
-		enuk,
 	},
 })
 

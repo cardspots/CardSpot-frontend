@@ -7,11 +7,12 @@ import NotFound from '@/views/404.vue'
 //路由表
 const routes = [
 	{ path: '/', component: LocalizedPage, props: { page: 'home' } }, //主页
-	{path: '/login', component: LocalizedPage,props:{page:'login'}},
-	{path: '/reg', component: LocalizedPage,props:{page:'reg'}},
+	{ path: '/login', component: LocalizedPage, props: { page: 'login' } },
+	{ path: '/reg', component: LocalizedPage, props: { page: 'reg' } },
+	{ path: '/@:username', component: () => import('@/views/profile.vue') },
+	{ path: '/profile', component: () => import('@/views/profile.vue') },
 	{ path: '/about', component: LocalizedPage, props: { page: 'about' } }, //关于我们
 	{ path: '/license', component: () => import('@/views/license.vue') }, //使用协议
-	{ path: '/@:username', component: () => import('@/views/profile.vue') },
 	{ path: '/select', component: () => import('@/views/selectTable.vue') },
 	{ path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }, //404页面
 ]

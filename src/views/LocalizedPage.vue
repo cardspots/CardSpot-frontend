@@ -10,15 +10,15 @@ const comp = shallowRef(null)
 const modules = import.meta.glob('./*/**/*.md')
 
 const load = async (lang) => {
-    const key = `./${lang}/${props.page}.md`
-    const fallbackKey = `./zhcn/${props.page}.md`
-    const loader = modules[key] ?? modules[fallbackKey]
-    if (!loader) {
-        console.warn(`[LocalizedPage] 找不到页面: ${key} 或 ${fallbackKey}`)
-        comp.value = null
-        return
-    }
-    comp.value = (await loader()).default
+	const key = `./${lang}/${props.page}.md`
+	const fallbackKey = `./zhcn/${props.page}.md`
+	const loader = modules[key] ?? modules[fallbackKey]
+	if (!loader) {
+		console.warn(`[LocalizedPage] 找不到页面: ${key} 或 ${fallbackKey}`)
+		comp.value = null
+		return
+	}
+	comp.value = (await loader()).default
 }
 
 //watch(locale, load, { immediate: true })
@@ -26,5 +26,5 @@ watch([locale, () => props.page], ([l, p]) => load(l), { immediate: true })
 </script>
 
 <template>
-    <component :is="comp" v-if="comp" />
+	<component :is="comp" v-if="comp" />
 </template>
